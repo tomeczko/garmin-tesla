@@ -148,7 +148,7 @@ class SecondDelegate extends Ui.BehaviorDelegate {
 
         if (_set_climate_off) {
             _set_climate_off = false;
-            _handler.invoke("HVAC Off");
+            _handler.invoke(Ui.loadResource(Rez.Strings.label_hvac_off));
             _tesla.climateOff(_vehicle_id, method(:onClimateDone));
         }
 
