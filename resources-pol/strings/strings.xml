@@ -12,7 +12,7 @@
 	<!--  Tesla layout -->
     <string id="button_climate_on">HVAC</string>
     <string id="button_door">Drzwi</string>
-    <string id="button_frunk">Bagażnik</string>
+    <string id="button_frunk">Frunk</string>
 
 	<!--  Option menu -->
     <string id="menu_label_reset">Reset...</string>
@@ -28,20 +28,20 @@
     <string id="label_charge">Bateria: </string>
     <string id="label_climate">HVAC: </string>
     <string id="label_error">Bład: </string>
-    <string id="label_frunk">Bagażnik</string>
+    <string id="label_frunk">Frunk</string>
     <string id="label_getting_vehicles">Pobieranie aut...</string>
     <string id="label_honk">Trąbnij</string>
     <string id="label_hvac_on">HVAC załączony</string>
     <string id="label_hvac_off">HVAC wyłączony</string>
-    <string id="label_lock_doors">Zamknij</string>
+    <string id="label_lock_doors">Zamykanie drzwi...</string>
     <string id="label_locked">Zamknięte</string>
     <string id="label_login_on_phone">Zaloguj się na telefonie!</string>
     <string id="label_oauth_error">Bład OAuth</string>
     <string id="label_off">Wył.</string>
     <string id="label_on">Zał.</string>
-    <string id="label_open_frunk">Otworzyć bagażnik?</string>
+    <string id="label_open_frunk">Otworzyć frunk?</string>
     <string id="label_requesting_data">Pobieranie danych...</string>
-    <string id="label_unlock_doors">Odblokuj</string>
+    <string id="label_unlock_doors">Odblokowywanie drzwi...</string>
     <string id="label_unlocked">Otwarte</string>
     <string id="label_waking_vehicle">Wybudzanie auta...</string>
 </strings>
