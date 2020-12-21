@@ -160,14 +160,16 @@ class SecondDelegate extends Ui.BehaviorDelegate {
 
         if (_unlock) {
             _unlock = false;
-            _handler.invoke(Ui.loadResource(Rez.Strings.label_unlock_doors));
-            _tesla.doorUnlock(_vehicle_id, method(:onLockDone));
+            var view = new Ui.Confirmation(Ui.loadResource(Rez.Strings.confirm_unlock_doors));
+            var delegate = new SimpleConfirmDelegate(method(:unlockDoorsConfirmed));
+            Ui.pushView(view, delegate, Ui.SLIDE_UP);
         }
 
         if (_lock) {
             _lock = false;
-            _handler.invoke(Ui.loadResource(Rez.Strings.label_lock_doors));
-            _tesla.doorLock(_vehicle_id, method(:onLockDone));
+            var view = new Ui.Confirmation(Ui.loadResource(Rez.Strings.confirm_lock_doors));
+            var delegate = new SimpleConfirmDelegate(method(:lockDoorsConfirmed));
+            Ui.pushView(view, delegate, Ui.SLIDE_UP);
         }
 
         if (_open_frunk) {
@@ -176,6 +178,16 @@ class SecondDelegate extends Ui.BehaviorDelegate {
             var delegate = new SimpleConfirmDelegate(method(:frunkConfirmed));
             Ui.pushView(view, delegate, Ui.SLIDE_UP);
         }
+    }
+
+    function unlockDoorsConfirmed() {
+        _handler.invoke(Ui.loadResource(Rez.Strings.label_unlock_doors));
+        _tesla.doorUnlock(_vehicle_id, method(:onLockDone));
+    }
+
+    function lockDoorsConfirmed() {
+        _handler.invoke(Ui.loadResource(Rez.Strings.label_lock_doors));
+        _tesla.doorLock(_vehicle_id, method(:onLockDone));
     }
 
     function frunkConfirmed() {
